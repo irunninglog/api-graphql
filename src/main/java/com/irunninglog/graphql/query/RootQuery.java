@@ -1,7 +1,7 @@
 package com.irunninglog.graphql.query;
 
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
-import com.irunninglog.graphql.objects.Athlete;
+import com.irunninglog.graphql.object.Athlete;
 import org.springframework.stereotype.Component;
 
 @Component

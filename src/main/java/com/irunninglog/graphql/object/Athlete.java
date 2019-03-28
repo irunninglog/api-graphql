@@ -1,4 +1,4 @@
-package com.irunninglog.graphql.objects;
+package com.irunninglog.graphql.object;
 
 public class Athlete {
 
