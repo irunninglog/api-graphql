@@ -21,6 +21,7 @@ public final class AthleteQuery implements GraphQLQueryResolver {
         this.request = request;
     }
 
+    @SuppressWarnings("WeakerAccess")
     public Athlete athlete(DataFetchingEnvironment environment) {
         GraphQLContext context = environment.getContext();
         HttpServletRequest httpServletRequest = context.getHttpServletRequest().isPresent()

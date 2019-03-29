@@ -48,7 +48,7 @@ public class AthleteQueryTest {
         Athlete athlete = new Athlete("1", "Allan", "Lewis", "Hoboken", "New Jersey", "USA", Athlete.Sex.Male, "small", "large", Collections.singletonList(summary));
 
         ResponseEntity<Athlete> responseEntity = new ResponseEntity<>(athlete, HttpStatus.OK);
-        // TODO - Eliminate warning
+        //noinspection unchecked
         Mockito.when(restTemplate.exchange(any(String.class), any(HttpMethod.class), any(RequestEntity.class), any(Class.class))).thenReturn(responseEntity);
 
         Athlete response = query.athlete(environment);
