@@ -23,7 +23,7 @@ public final class Athlete {
     private final Sex sex;
     private final String profileSmall;
     private final String profileLarge;
-    private final List<ShoeSummary> shoes;
+    private final List<ShoeSummary> shoeSummaries;
 
     @JsonCreator
     public Athlete(@JsonProperty("id") String id,
@@ -35,7 +35,7 @@ public final class Athlete {
                    @JsonProperty("sex") Sex sex,
                    @JsonProperty("profile_medium") String profileSmall,
                    @JsonProperty("profile") String profileLarge,
-                   @JsonProperty("shoes") List<ShoeSummary> shoes) {
+                   @JsonProperty("shoes") List<ShoeSummary> shoeSummaries) {
 
         this.id = id;
         this.firstName = firstName;
@@ -46,7 +46,7 @@ public final class Athlete {
         this.sex = sex;
         this.profileSmall = profileSmall;
         this.profileLarge = profileLarge;
-        this.shoes = shoes;
+        this.shoeSummaries = shoeSummaries;
     }
 
     public String getId() {
@@ -85,8 +85,8 @@ public final class Athlete {
         return profileLarge;
     }
 
-    public List<ShoeSummary> getShoes() {
-        return shoes;
+    public List<ShoeSummary> getShoeSummaries() {
+        return shoeSummaries;
     }
 
 }

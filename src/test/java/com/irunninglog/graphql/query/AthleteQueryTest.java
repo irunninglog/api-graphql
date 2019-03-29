@@ -61,9 +61,9 @@ public class AthleteQueryTest {
         assertEquals(Athlete.Sex.Male, response.getSex());
         assertEquals("small", response.getProfileSmall());
         assertEquals("large", response.getProfileLarge());
-        assertEquals(1, response.getShoes().size());
+        assertEquals(1, response.getShoeSummaries().size());
 
-        ShoeSummary summary1 = response.getShoes().get(0);
+        ShoeSummary summary1 = response.getShoeSummaries().get(0);
         assertEquals("g1", summary1.getId());
         assertEquals("Name", summary1.getName());
         assertEquals(Boolean.TRUE, summary1.isPrimary());

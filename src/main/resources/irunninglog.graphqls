@@ -16,7 +16,7 @@ type Athlete {
     sex: Sex
     profileSmall: String
     profileLarge: String
-    shoes: [ShoeSummary]
+    shoeSummaries: [ShoeSummary]
 }
 
 enum Sex {
