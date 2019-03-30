@@ -10,8 +10,8 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...
       - mvn package
-#      - docker build -t irunninglog/api:latest .
-#      - docker tag irunninglog/api:latest 329192577320.dkr.ecr.us-east-1.amazonaws.com/irunninglog/api:latest
+      - docker build -t irunninglog/api-graphql:latest .
+      - docker tag irunninglog/api-graphql:latest 329192577320.dkr.ecr.us-east-1.amazonaws.com/irunninglog/api-graphql:latest
 #  post_build:
 #    commands:
 #      - echo Build completed on `date`
