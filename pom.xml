@@ -12,38 +12,49 @@
         <relativePath/>
     </parent>
 
-    <version>1.0.0</version>
-
     <artifactId>api-graphql</artifactId>
+    <version>1.0.0</version>
+    <name>irunninglog graphql api</name>
+    <description>Public API for consuming irunninglog data via GraphQL</description>
+
+    <properties>
+        <version.graphql.java.tools>5.2.4</version.graphql.java.tools>
+        <version.graphql.spring.boot>5.0.2</version.graphql.spring.boot>
+        <version.junit>4.12</version.junit>
+        <version.mockito>1.10.19</version.mockito>
+        <version.spring>5.1.2.RELEASE</version.spring>
+    </properties>
 
     <dependencies>
+        <!-- GRAPHQL DEPENDENCIES -->
         <dependency>
             <groupId>com.graphql-java</groupId>
             <artifactId>graphql-spring-boot-starter</artifactId>
-            <version>5.0.2</version>
+            <version>${version.graphql.spring.boot}</version>
         </dependency>
         <dependency>
             <groupId>com.graphql-java</groupId>
             <artifactId>graphql-java-tools</artifactId>
-            <version>5.2.4</version>
+            <version>${version.graphql.java.tools}</version>
         </dependency>
 
+        <!-- TEST DEPENDENCIES -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>${version.junit}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-all</artifactId>
-            <version>1.10.19</version>
+            <version>${version.mockito}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>5.1.2.RELEASE</version>
+            <version>${version.spring}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
