@@ -1,4 +1,4 @@
-package com.irunninglog.graphql.query;
+package com.irunninglog.graphql;
 
 import org.mockito.Mockito;
 import org.springframework.context.annotation.Bean;

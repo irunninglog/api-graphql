@@ -1,5 +1,6 @@
 package com.irunninglog.graphql.query;
 
+import com.irunninglog.graphql.TestConfig;
 import com.irunninglog.graphql.object.Athlete;
 import com.irunninglog.graphql.object.ShoeSummary;
 import graphql.schema.DataFetchingEnvironment;
