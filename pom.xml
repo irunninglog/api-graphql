@@ -22,9 +22,9 @@
         <version.graphql.spring.boot>5.0.2</version.graphql.spring.boot>
         <version.junit>4.12</version.junit>
         <version.logback>1.2.3</version.logback>
-        <version.mockito>1.10.19</version.mockito>
         <version.slf4j>1.7.25</version.slf4j>
         <version.spring>5.1.2.RELEASE</version.spring>
+        <version.spring-boot>2.1.0.RELEASE</version.spring-boot>
         <version.sysout-over-slf4j>1.0.2</version.sysout-over-slf4j>
     </properties>
 
@@ -91,10 +91,10 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-all</artifactId>
-            <version>${version.mockito}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+            <version>${version.spring-boot}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>

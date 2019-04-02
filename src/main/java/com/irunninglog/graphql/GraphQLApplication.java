@@ -1,11 +1,11 @@
-package com.irunninglog.graphql.main;
+package com.irunninglog.graphql;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
-@SpringBootApplication(scanBasePackages = "com.irunninglog.graphql")
+@SpringBootApplication()
 public class GraphQLApplication {
 
     public static void main(String[] args) {

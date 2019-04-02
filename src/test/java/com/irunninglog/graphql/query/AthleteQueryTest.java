@@ -1,6 +1,5 @@
 package com.irunninglog.graphql.query;
 
-import com.irunninglog.graphql.TestConfig;
 import com.irunninglog.graphql.object.Athlete;
 import com.irunninglog.graphql.object.ShoeSummary;
 import graphql.schema.DataFetchingEnvironment;
@@ -9,12 +8,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.RequestEntity;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.RestTemplate;
 
 import javax.servlet.http.HttpServletRequest;
@@ -23,9 +19,9 @@ import java.util.Collections;
 import java.util.Optional;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Matchers.any;
+import static org.mockito.ArgumentMatchers.any;
 
-@RunWith(SpringJUnit4ClassRunner.class)
+@RunWith(SpringRunner.class)
 @ContextConfiguration(classes = TestConfig.class)
 public class AthleteQueryTest {
 
@@ -50,7 +46,7 @@ public class AthleteQueryTest {
 
         ResponseEntity<Athlete> responseEntity = new ResponseEntity<>(athlete, HttpStatus.OK);
         //noinspection unchecked
-        Mockito.when(restTemplate.exchange(any(String.class), any(HttpMethod.class), any(RequestEntity.class), any(Class.class))).thenReturn(responseEntity);
+        Mockito.when(restTemplate.exchange(any(String.class), any(HttpMethod.class), any(HttpEntity.class), any(Class.class))).thenReturn(responseEntity);
 
         Athlete response = query.athlete(environment);
         assertEquals("1", response.getId());
