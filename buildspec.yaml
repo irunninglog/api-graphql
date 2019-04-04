@@ -12,7 +12,7 @@ phases:
   post_build:
     commands:
       - docker push 329192577320.dkr.ecr.us-east-1.amazonaws.com/irunninglog/api-graphql:latest
-      - printf '[{"name":"irunninglog-api-graphql","imageUri":"%s"}]' 329192577320.dkr.ecr.us-east-1.amazonaws.com/irunninglog/api-graphql:latest > imagedefinitions.json
+      - printf '[{"name":"api-graphql","imageUri":"%s"}]' 329192577320.dkr.ecr.us-east-1.amazonaws.com/irunninglog/api-graphql:latest > imagedefinitions.json
 
 artifacts:
   files:
