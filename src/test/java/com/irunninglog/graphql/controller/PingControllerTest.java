@@ -24,7 +24,7 @@ public class PingControllerTest {
         mvc.perform(get("/ping")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(MockMvcResultMatchers.jsonPath("$.timestamp").exists());
+                .andExpect(MockMvcResultMatchers.jsonPath("$.time").exists());
     }
 
 }
