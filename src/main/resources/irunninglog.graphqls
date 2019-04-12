@@ -3,7 +3,8 @@ schema {
 }
 
 type Query {
-    athlete: Athlete!
+    athlete: Athlete
+    shoes(ids: [String]!): [ShoeDetail]
 }
 
 type Athlete {
@@ -28,4 +29,14 @@ type ShoeSummary {
     id: ID!
     name: String!
     primary: Boolean!
+}
+
+type ShoeDetail {
+    id: ID!
+    name: String!
+    primary: Boolean!
+    distance: Float
+    brandName: String
+    modelName: String
+    description: String
 }
