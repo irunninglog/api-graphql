@@ -38,6 +38,7 @@ public class QueryTest {
     @Before
     public void before() {
         HttpServletRequest httpServletRequest = Mockito.mock(HttpServletRequest.class);
+        Mockito.when(httpServletRequest.getHeader("Authorization")).thenReturn("foo");
         Optional<HttpServletRequest> optional = Optional.of(httpServletRequest);
 
         GraphQLContext context = Mockito.mock(GraphQLContext.class);

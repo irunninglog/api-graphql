@@ -1,0 +1,24 @@
+module irunninglog.graphql {
+
+    opens com.irunninglog.graphql.query;
+    exports com.irunninglog.graphql.query;
+
+    requires graphql.java;
+    requires graphql.java.servlet;
+    requires graphql.java.tools;
+    requires jackson.annotations;
+    requires java.logging;
+    requires javax.servlet.api;
+    requires jcl.over.slf4j;
+    requires jul.to.slf4j;
+    requires logback.access;
+    requires log4j.over.slf4j;
+    requires slf4j.api;
+    requires spring.beans;
+    requires spring.boot;
+    requires spring.boot.autoconfigure;
+    requires spring.context;
+    requires spring.web;
+    requires sysout.over.slf4j;
+
+}
