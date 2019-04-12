@@ -10,13 +10,15 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 import uk.org.lidalia.sysoutslf4j.context.SysOutOverSLF4J;
 
 import java.util.Collections;
 
-@SpringBootApplication()
+@SpringBootApplication
+@EnableCaching
 public class GraphQLApplication implements InitializingBean {
 
     private static final Logger LOG = LoggerFactory.getLogger(GraphQLApplication.class);
