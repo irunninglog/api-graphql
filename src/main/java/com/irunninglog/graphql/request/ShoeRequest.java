@@ -16,7 +16,7 @@ public class ShoeRequest extends AbstractRequest<ShoeDetail> {
 
     @Cacheable(cacheNames = "shoes", key = "#a1")
     public ShoeDetail shoe(HttpServletRequest request, String id) {
-        return get("https://www.strava.com/api/v3/gear/" + id, request, ShoeDetail.class);
+        return get("https://www.strava.com/api/v3/gear/" + id, request);
     }
 
 }

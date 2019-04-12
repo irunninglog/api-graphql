@@ -1,8 +1,5 @@
 module irunninglog.graphql {
 
-    opens com.irunninglog.graphql.query;
-    exports com.irunninglog.graphql.query;
-
     requires graphql.java;
     requires graphql.java.servlet;
     requires graphql.java.tools;
@@ -18,6 +15,7 @@ module irunninglog.graphql {
     requires spring.boot;
     requires spring.boot.autoconfigure;
     requires spring.context;
+    requires spring.core;
     requires spring.web;
     requires sysout.over.slf4j;
 
