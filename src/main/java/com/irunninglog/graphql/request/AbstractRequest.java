@@ -1,6 +1,5 @@
 package com.irunninglog.graphql.request;
 
-import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -19,7 +18,7 @@ abstract class AbstractRequest<T> {
         this.restTemplate = restTemplate;
     }
 
-    T get(String url, HttpServletRequest request) {
+    T get(String url, HttpServletRequest request, Class<T> clazz) {
         String authHeader = request.getHeader(AUTHORIZATION);
 
         HttpHeaders headers = new HttpHeaders();
@@ -27,7 +26,7 @@ abstract class AbstractRequest<T> {
 
         HttpEntity<String> httpEntity = new HttpEntity<>(null, headers);
 
-        ResponseEntity<T> responseEntity = restTemplate.exchange(url, HttpMethod.GET, httpEntity, new ParameterizedTypeReference<>() {});
+        ResponseEntity<T> responseEntity = restTemplate.exchange(url, HttpMethod.GET, httpEntity, clazz);
 
         return responseEntity.getBody();
     }

@@ -18,7 +18,7 @@ public class AthleteRequest extends AbstractRequest<Athlete> {
 
     @Cacheable(cacheNames = "athletes", key = "#a0.getHeader('Authorization')")
     public Athlete athlete(HttpServletRequest request) {
-        return get("https://www.strava.com/api/v3/athlete", request);
+        return get("https://www.strava.com/api/v3/athlete", request, Athlete.class);
     }
 
 }
