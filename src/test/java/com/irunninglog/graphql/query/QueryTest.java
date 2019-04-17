@@ -10,6 +10,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.*;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -55,7 +56,7 @@ public class QueryTest {
 
         ResponseEntity<Athlete> responseEntity = new ResponseEntity<>(athlete, HttpStatus.OK);
         //noinspection unchecked
-        Mockito.when(restTemplate.exchange(any(String.class), any(HttpMethod.class), any(HttpEntity.class), any(Class.class))).thenReturn(responseEntity);
+        Mockito.when(restTemplate.exchange(any(String.class), any(HttpMethod.class), any(HttpEntity.class), any(ParameterizedTypeReference.class))).thenReturn(responseEntity);
 
         Athlete response = query.athlete(environment);
         assertEquals("1", response.getId());
@@ -81,7 +82,7 @@ public class QueryTest {
 
         ResponseEntity<ShoeDetail> responseEntity = new ResponseEntity<>(shoeDetail, HttpStatus.OK);
         //noinspection unchecked
-        Mockito.when(restTemplate.exchange(any(String.class), any(HttpMethod.class), any(HttpEntity.class), any(Class.class))).thenReturn(responseEntity);
+        Mockito.when(restTemplate.exchange(any(String.class), any(HttpMethod.class), any(HttpEntity.class), any(ParameterizedTypeReference.class))).thenReturn(responseEntity);
 
         List<ShoeDetail> details = query.shoes(Collections.singletonList("id"), environment);
         assertEquals(1, details.size());
