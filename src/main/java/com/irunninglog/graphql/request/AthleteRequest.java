@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 @Component
 public class AthleteRequest extends AbstractRequest<Athlete> {
 
+    private static final String URL = "https://www.strava.com/api/v3/athlete";
+
     @Autowired
     public AthleteRequest(RestTemplate restTemplate) {
         super(restTemplate);
@@ -18,7 +20,12 @@ public class AthleteRequest extends AbstractRequest<Athlete> {
 
     @Cacheable(cacheNames = "athletes", key = "#a0.getHeader('Authorization')")
     public Athlete athlete(HttpServletRequest request) {
-        return get("https://www.strava.com/api/v3/athlete", request, Athlete.class);
+        return get(URL, request, Athlete.class);
+    }
+
+    @Cacheable(cacheNames = "athletes", key="#a0")
+    public Athlete athlete(String token) {
+        return get(URL, token, Athlete.class);
     }
 
 }

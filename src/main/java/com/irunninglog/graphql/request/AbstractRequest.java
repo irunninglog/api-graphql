@@ -19,10 +19,12 @@ abstract class AbstractRequest<T> {
     }
 
     T get(String url, HttpServletRequest request, Class<T> clazz) {
-        String authHeader = request.getHeader(AUTHORIZATION);
+        return get(url, request.getHeader(AUTHORIZATION), clazz);
+    }
 
+    T get(String url, String token, Class<T> clazz) {
         HttpHeaders headers = new HttpHeaders();
-        headers.add(AUTHORIZATION, authHeader);
+        headers.add(AUTHORIZATION, token);
 
         HttpEntity<String> httpEntity = new HttpEntity<>(null, headers);
 

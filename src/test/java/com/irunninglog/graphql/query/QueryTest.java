@@ -6,6 +6,7 @@ import com.irunninglog.graphql.object.ShoeSummary;
 import graphql.schema.DataFetchingEnvironment;
 import graphql.servlet.GraphQLContext;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
@@ -24,6 +25,7 @@ import java.util.Optional;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 
+@Ignore
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = TestConfig.class)
 public class QueryTest {

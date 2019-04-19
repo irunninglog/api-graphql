@@ -1,6 +1,7 @@
 package com.irunninglog.graphql.query;
 
 import org.mockito.Mockito;
+import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -11,8 +12,8 @@ import org.springframework.web.client.RestTemplate;
 public class TestConfig {
 
     @Bean
-    public RestTemplate restTemplate() {
-        return Mockito.mock(RestTemplate.class);
+    public TestRestTemplate testRestTemplate() {
+        return new TestRestTemplate();
     }
 
 }

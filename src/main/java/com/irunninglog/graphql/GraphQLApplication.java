@@ -17,8 +17,8 @@ import uk.org.lidalia.sysoutslf4j.context.SysOutOverSLF4J;
 
 import java.util.Collections;
 
-@SpringBootApplication
 @EnableCaching
+@SpringBootApplication
 public class GraphQLApplication implements InitializingBean {
 
     private static final Logger LOG = LoggerFactory.getLogger(GraphQLApplication.class);
