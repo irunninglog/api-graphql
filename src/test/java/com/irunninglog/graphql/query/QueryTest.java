@@ -27,7 +27,6 @@ import static org.mockito.ArgumentMatchers.any;
 
 @Ignore
 @RunWith(SpringRunner.class)
-@ContextConfiguration(classes = TestConfig.class)
 public class QueryTest {
 
     @Autowired

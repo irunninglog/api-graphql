@@ -1,7 +1,5 @@
 package com.irunninglog.graphql;
 
-import com.graphql.spring.boot.test.GraphQLTest;
-import com.graphql.spring.boot.test.GraphQLTestTemplate;
 import com.irunninglog.graphql.security.SecurityConfig;
 import com.oembedler.moon.graphql.boot.GraphQLWebAutoConfiguration;
 import graphql.schema.GraphQLSchema;
